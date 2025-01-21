@@ -25,6 +25,26 @@
     padding: 0;
 }
 
+h1{
+    /* Text and font */
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--cor-destaque);
+    font-family: var(--font-main), serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p{
+    /* Text and font */
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-family: var(--font-main), serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 body{
     /* Alignment */
     display: flex;
@@ -38,6 +58,8 @@ body{
     width: 100vw;
     background-color:var(--cor-fundo);
     color: var(--cor-texto);
+
+    z-index: 1;
 }
 
 header
@@ -191,13 +213,33 @@ sp{
     margin: -.25rem -.25rem -.25rem -.25rem;
 }
 
+.landing__left__me__experienceButton{
+    /* Alignment */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 90%;
+    gap: 1rem;
+}
+
+.landing__left__me__experienceButton>h2{
+    /* Text and font */
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--cor-destaque);
+    font-family: var(--font-main), serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 .landing__left__me__buttonArea{
     /* Alignment */
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
     gap: 1.5rem;
 }
 
@@ -243,9 +285,10 @@ sp{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    z-index: 2;
         
     /* Box */
-    width: 80%;
+    width: 100%;
     height: 7.5rem;
     border-radius: 16px;
     background-color: rgba(255,255,255, .04);
@@ -259,6 +302,7 @@ sp{
     justify-content: center;
     flex-direction: column;
     gap: .75rem;
+    z-index: 2;
     
     /* Box */
     height: 80%;
@@ -316,6 +360,7 @@ sp{
     
     right: 0;
     bottom: 7%;
+    z-index: 0;
 }
 
 footer{
@@ -331,6 +376,30 @@ footer{
     height: 5%;
     width: 100%;
     background-color: var(--cor-fundo-footer);
+}
+
+.about{
+    /* Alignment */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;   
+    justify-content: center;
+    
+    /* box */
+    height: 95vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 2%;
+}
+
+.about__text{
+    /* Alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: justify;
 }
 
 @media (max-width: 1250px){
