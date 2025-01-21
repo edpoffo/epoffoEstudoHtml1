@@ -5,12 +5,19 @@
     --cor-destaque: #FD6F00;
     --cor-destaque-selecionado: #baf2ff;
     --cor-destaque-hover: #F6F6F6;
-    --cor-fundo-botao-hover: #272727;
+    --cor-fundo-botao-hover: #57575777;
+    --cor-fundo-footer: #27272777;
+    --cor-fundo-header: #27272777;
     
     --cor-texto: #707070;
-    --cor-texto-claro: #DFDFDF
+    --cor-texto-claro: #DFDFDF;
     
-
+    --cor-texto-nav: #707070;
+    --cor-texto-nav-hover: #DFDFDF;
+    --cor-texto-nav-selecionado: #FD6F00;
+    --cor-texto-nav-selecionado-hover: #ffb882;
+    
+    --font-main: "Lato";
 }
 
 *{
@@ -24,32 +31,71 @@ body{
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-
     box-sizing: border-box;
     
+    /* box */
+    height: 100vh;
+    width: 100vw;
     background-color:var(--cor-fundo);
     color: var(--cor-texto);
 }
 
-main{
-    width: 100%;
-}
-
-content{
+header
+{
     /* Alignment */
     display: flex;
     align-items: center;
+    
+    /* Box */
+    height: 5%;
+    width: 80%;
+    padding-left: 20%;
+    background-color: var(--cor-fundo-header);
+}
+
+main{
+    /* Alignment */
+    display: flex;
+    align-items: stretch;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
 
     /* Box */
-    height: 100vh;
     width: 100%;
-    padding-left: 80px;
-    padding-right: 80px;
-    background: rgb(18,18,18);
-    background: linear-gradient(100deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 10%, rgba(36,22,0,1) 20%, rgba(18,18,18,1) 30%, rgba(18,18,18,1) 100%);
-    
+    height: 95%;
+}
+
+header>nav{
+    /* Alignment */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 3.25rem;
+
+    font-family: var(--font-main), serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+header>nav>a{
+    text-decoration: none;
+}
+
+header>nav>a>p{
+    color: var(--cor-texto-nav);
+}
+
+header>nav>a>p:hover{
+    color: var(--cor-texto-nav-hover);
+}
+
+header>nav>a>strong{
+    color: var(--cor-texto-nav-selecionado);
+}
+
+header>nav>a>strong:hover{
+    color: var(--cor-texto-nav-selecionado-hover);
 }
 
 sp{
@@ -63,7 +109,7 @@ sp{
 
 /* Landing area */
 
-.landingBG{
+.landing{
     /* Alignment */
     display: flex;
     align-items: center;
@@ -71,9 +117,9 @@ sp{
     flex-direction: row;
 
     /* Box */
-    height: 100vh;
+    background: linear-gradient(100deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 20%, rgba(36,22,0,1) 30%, rgba(18,18,18,1) 40%, rgba(18,18,18,1) 100%);
+    height: 95vh;
     width: 100%;
-    background-color: var(--cor-fundo);
 }
 
 .landing__left__me{
@@ -83,6 +129,8 @@ sp{
     justify-content: space-between;
     flex-direction: column;
     gap: 2rem;
+    height: 80%;
+    padding-left: 20%;
 }
 
 .landing__left__me__text{
@@ -91,11 +139,12 @@ sp{
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
+    
     gap: 1rem;
 }
 
 .landing__left__me__text__presentation{
-    font-family: "Lato", serif;
+    font-family: var(--font-main), serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.5rem;
@@ -104,7 +153,7 @@ sp{
 }
 
 .landing__left__me__text__presentation__myName{
-    font-family: "Lato", serif;
+    font-family: var(--font-main), serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.75rem;
@@ -113,7 +162,7 @@ sp{
 }
 
 .landing__left__me__text__professions{
-    font-family: "Lato", serif;
+    font-family: var(--font-main), serif;
     font-weight: 700;
     font-style: normal;
     font-size: 4.375rem;
@@ -148,7 +197,7 @@ sp{
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: row;
-    width: 60%;
+    width: 80%;
     gap: 1.5rem;
 }
 
@@ -162,35 +211,45 @@ sp{
     /* Box */
     border: 2px solid var(--cor-destaque);
     height: 4rem;
-    width: 30vw;
+    width: 48%;
     border-radius: 16px;
 
     /* Text and font */
     font-size: 1.25rem;
     text-decoration: none;
     color: var(--cor-texto);
-    font-family: "Lato", serif;
+    font-family: var(--font-main), serif;
     font-weight: 700;
     font-style: normal;
 }
 
+.landing__left__me__buttonArea__button:hover{
+    /* Box */
+    height: 4.2rem;
+    width: 53%;
+    margin-top: -.1rem;
+    margin-bottom: -.1rem;
+    margin-left: -2.5%;
+    margin-right: -2.5%;
+    background-color: var(--cor-fundo-botao-hover);
+
+    /* Text and font */
+    font-size: 1.35rem;
+}
+
 .landing__left__me__experience{
-     
     /* Alignment */
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    
-    
+        
     /* Box */
-    width: 60%;
+    width: 80%;
     height: 7.5rem;
     border-radius: 16px;
     background-color: rgba(255,255,255, .04);
 }
-
-
 
 .landing__left__me__experience__obj{
     /* Alignment */
@@ -202,9 +261,16 @@ sp{
     gap: .75rem;
     
     /* Box */
-    width: 60%; 
-    height: 7.5rem;
-    padding-left: 5%;
+    height: 80%;
+    padding-left: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.landing__left__me__experience__obj:hover{
+    /* Box */
+    background: var(--cor-fundo-botao-hover);
+    border-radius: 10px;
 }
 
 .landing__left__me__experience__obj > strong{
@@ -212,7 +278,7 @@ sp{
     font-size: 1.5rem;
     text-decoration: none;
     color: var(--cor-destaque);
-    font-family: "Lato", serif;
+    font-family: var(--font-main), serif;
     font-weight: 700;
     font-style: normal;
 }
@@ -222,7 +288,7 @@ sp{
     font-size: 1.25rem;
     text-decoration: none;
     color: var(--cor-texto-claro);
-    font-family: "Lato", serif;
+    font-family: var(--font-main), serif;
     font-weight: 700;
     font-style: normal;
 }
@@ -233,7 +299,7 @@ sp{
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column;
-
+    
     
     height: 100%;
 }
@@ -244,5 +310,98 @@ sp{
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column;
-    flex-grow: 0.5;
+    position: absolute;
+    width: auto; /* you can use % */
+    height: 95%;
+    
+    right: 0;
+    bottom: 7%;
+}
+
+footer{
+    /* Alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 2%;
+
+    /* Box */
+    height: 5%;
+    width: 100%;
+    background-color: var(--cor-fundo-footer);
+}
+
+@media (max-width: 1250px){
+    .landing{
+        /* Alignment */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    
+        /* Box */
+        background: linear-gradient(100deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 10%, rgba(36,22,0,1) 20%, rgba(18,18,18,1) 30%, rgba(18,18,18,1) 100%);
+        height: 95vh;
+        width: 100%;
+    }
+    
+    .landing__left__me{
+        /* Alignment */
+        padding-left: 10%;
+    }
+
+    header{
+        width: 90%;
+        padding-left: 10%;
+    }
+
+}
+
+@media (max-width: 1100px){
+    .landing__left__me{
+        /* Alignment */
+        padding-left: 5%;
+    }
+
+    header{
+        width: 95%;
+        padding-left: 5%;
+    }
+
+    .landing__photoArea__Photo{
+        /* Alignment */
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: absolute;
+        width: auto; /* you can use % */
+        height: 75%;
+        
+        right: 0;
+        bottom: 7%;
+
+        background-image: url("Assets/FotoEduardoPoffo");
+    }
+}
+
+/* Phone */
+@media (max-width: 950px){
+    .landing__photoArea__Photo{
+        /* Alignment */
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: absolute;
+        width: auto; /* you can use % */
+        height: 0%;
+        
+        right: 0;
+        bottom: 7%;
+
+        background-image: url("Assets/FotoEduardoPoffo");
+    }
 }
