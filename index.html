@@ -1,54 +1,108 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
+    <title>Portfolio - Home</title>
     <link rel="stylesheet" href="Styles/style.css">
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <nav class = "header__Nav">
-            <a href="index.html" class="header__Nav__LinkSelected">Home</a>
-            <a href="about.html" class="header__Nav__Link">Sobre mim</a>
-        </nav>
+        
     </header>
     <!-- Main content -->
-    <main class="apresentacao">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong 
-            class="titulo-destaque">com um Front-end de qualidade!
-            </strong></h1>
-            <p class="apresentacao__conteudo__texto">Olá! Sou Joana Santos, desenvolvedora
-            Front-end com especialidade em React, HTML e
-            CSS. Ajudo pequenos negócios e designers a
-            colocarem em prática boas ideias. Vamos
-            conversar?</p>
-            <div class="apresentacao__links">
-                <h2 class = "apresentacao__links__subtitulo">Acesse minhas redes:</h2>
-                <nav class = "apresentacao__links__area">
-                    <a class="apresentacao__links__link" href="https://LinkedIn.com/">
-                        <image src="Assets/Logo linkedin.svg"> LinkedIn
-                    </a>
-                    <a class="apresentacao__links__link" href="https://github.com/">
-                        <image src="Assets/Logo Github.svg"> GitHub
-                    </a>
-                    <a class="apresentacao__links__link" href="https://twitch.com/">
-                        <image src="Assets/Logo Twitch.svg"> Twitch
-                    </a>
-                </nav>
-            </div>
+    <main>
+        <section class = "landingBG">
+            <content>
+                <div class = "landing__left__me">
+                    <div class = "landing__left__me__text">
+                        <div class = "landing__left__me__text__presentation">
+                            <p>Olá, eu sou</p>
+                            <h1 class = "landing__left__me__text__presentation__myName">Eduardo Poffo medeiros Dias, Msc</h1>
+                        </div>
+                        <div>
+                            <h2 class ="landing__left__me__text__professions">Engenheiro Mecânico</h2>
+                            <h2 class ="landing__left__me__text__professions">Programador</h2>
+                            <h2 class ="landing__left__me__text__professions">Professor</h2>
+                        </div>
+                    </div>
+                    <div class = "landing__left__me__links">
+                        <a href = "https://www.linkedin.com/in/eduardo-poffo-9a49a0189/" target = "_blank"><img src = "Assets/Logo LinkedIn.svg" alt = "LinkedIn Logo" class = "landing__left__me__links__link"></a>
+                        <a href = "https://www.instagram.com/epoffo/" target = "_blank"><img src = "Assets/Logo Instagram.svg" alt = "Instagram Logo" class = "landing__left__me__links__link"></a>
+                        <a href = "https://github.com/edpoffo" target = "_blank"><img src = "Assets/Logo GitHub.svg" alt = "GitHub Logo" class = "landing__left__me__links__link"></a>
+                    </div>
+                    <div class = "landing__left__me__buttonArea">
+                        <a href = "https://api.whatsapp.com/send?phone=5547988256004&text=Olá!%20Estou%20entrando%20em%20contato%20contigo%20através%20do%20seu%20portfólio.%0APodemos%20conversar?" class = "landing__left__me__buttonArea__button" target = "_blank"><img src = "Assets/Logo Whatsapp.svg" alt = "Logo WhatsApp" class = "logoWpp">Enviar mensagem</a>
+                        <a href = "" class = "landing__left__me__buttonArea__button"><img src = "Assets/LogoCV.svg" alt = "Logo CV" class = "logoWpp">Baixar CV</a>
+                    </div>
+                    <div class = "landing__left__me__experience">
+                        <div class="landing__left__me__experience__obj">
+                            <strong>4+ anos</strong>
+                            <p>Lecionando</p>
+                        </div>
+                        <sp></sp>
+                        <div class="landing__left__me__experience__obj">
+                            <strong>4+ anos</strong>
+                            <p>Lecionando</p>
+                        </div>
+                        <sp></sp>
+                        <div class="landing__left__me__experience__obj">
+                            <strong>4+ anos</strong>
+                            <p>Lecionando</p>
+                        </div>
+                    </div>
+                </div>
+                <div class ="landing__photoArea">
+                    <img src ="Assets/EduardoBGless.png" alt = "Foto do Eduardo Poffo" class ="landing__photoArea__photo">
+                </div>
+            </content>
         </section>
-    <img src="Assets/FotoEduardoPoffo.jpg" alt="Foto do Eduardo Poffo" class = "apresentacao__imageBox">
     </main>
     <!-- Footer -->
     <footer>
         <h3>Desenvolvido por Eduardo Poffo</h3>
     </footer>
+    
 </body>
 
 </html>
+
+<!--Whatsapp Widget-->
+<script>
+    var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?46595';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+    "enabled":true,
+    "chatButtonSetting":{
+        "backgroundColor":"#fd6f00",
+        "ctaText":"Converse comigo",
+        "borderRadius":"25",
+        "marginLeft": "0",
+        "marginRight": "20",
+        "marginBottom": "20",
+        "ctaIconWATI":false,
+        "position":"right"
+    },
+    "brandSetting":{
+        "brandName":"Eduardo Poffo Medeiros Dias",
+        "brandSubTitle":"undefined",
+        "brandImg":"https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fmeta-q.cdn.bubble.io%2Ff1569940754281x739368442489696500%2Fwhatsapp.png?w=&h=&auto=compress&dpr=1&fit=max",
+        "welcomeText":"Olá!\nNo que posso te ajudar?",
+        "messageText":"Olá! Estou entrando em contato contigo através do seu portfólio.%0APodemos conversar?",
+        "backgroundColor":"#fd6f00",
+        "ctaText":"Converse comigo",
+        "borderRadius":"25",
+        "autoShow":false,
+        "phoneNumber":"5547988256004"
+    }
+    };
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
