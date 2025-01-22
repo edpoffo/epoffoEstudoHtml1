@@ -20,10 +20,10 @@ for (let i = 0; i < data.entradas.length; i++) {
     ProjectNameText.textContent = entry;
     projectDescriptionText.textContent = data.entradas[i].Descricao;
 
-    var fs = require('fs');
+    /*var fs = require('fs');
     var files = fs.readdirSync('../Portfolios/'+entry);
 
-    console.log(files.length);
+    console.log(files.length);*/
     
 }
 
