@@ -27,4 +27,5 @@ for (let i = 0; i < data.entradas.length; i++) {
     
 }
 
-if(!found) window.location.href = "index.html"; /* TODO: Redirect to 404*/
+if(!found) console.log("404");
+/*window.location.href = "index.html"; /* TODO: Redirect to 404*/
