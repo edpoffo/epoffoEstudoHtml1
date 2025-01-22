@@ -1,4 +1,6 @@
 import data from '../Portfolios/portfolios.json' with { type: 'json' };
+console.log(data);
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const entry = urlParams.get("entry")
