@@ -22,7 +22,15 @@
     
     --font-main: "Lato";
 }
+/*#region tests*/
+.testFillPink{
+    background: pink;
+}
 
+.testFillCyan{
+    background: cyan;
+}
+/*#endregion*/
 /*#region NormalTags*/
 
 *{
@@ -37,6 +45,8 @@
     color: var(--cor-texto);
     font-size: 1rem;
     font-weight: 700;
+
+    z-index: 3;
 }
 
 
@@ -56,8 +66,6 @@ body{
     box-sizing: border-box;
     
     /* box */
-    height: 100vh;
-    width: 100vw;
     background-color:var(--cor-fundo);
 
     z-index: 1;
@@ -66,17 +74,22 @@ body{
 main{
     /* Alignment */
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
     flex-direction: column;
 
     /* Box */
     width: 100%;
-    height: 95%;
 }
 
 .leftSpace{
-    padding-left: 20%;
+    padding-left: 15%;
+}
+
+.rightSpace{
+    padding-right: 10%;
+}
+
+.onePager{
+    height: 95vh;
 }
 /*#endregion*/
 /*#region ObjectBlocks*/
@@ -100,6 +113,10 @@ sp{
 
     margin: -.25rem -.25rem -.25rem -.25rem;
 }
+
+.square{
+    aspect-ratio: 1/1;
+}
 /*#endregion*/
 /*#region Alignment*/
 .vCenterSpaced{
@@ -108,6 +125,30 @@ sp{
     justify-content: space-between;
     align-items: center;
     align-content: center;
+}
+
+.hSize{
+    width: 100%;
+}
+
+.vCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.hCenter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 0;
+    width: 100%;
 }
 
 .hCenterSpaced{
@@ -155,7 +196,7 @@ sp{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1.5rem;
     text-align: justify;
 }
@@ -168,8 +209,8 @@ header
     align-items: center;
     
     /* Box */
-    height: 5%;
-    width: 80%;
+    height: 5vh;
+    width: 85%;
     background-color: var(--cor-fundo-header);
 }
 
@@ -207,16 +248,19 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: absolute;
-    bottom: 2%;
-
+    
     /* Box */
-    height: 5%;
+    margin-top: 25px;
+    height: 50px;
     width: 100%;
     background-color: var(--cor-fundo-footer);
 }
 /*#endregion*/
 /*#region LandingArea*/
+.onePager > main{
+    height: calc(100% - 50px);
+}
+
 .landing__left__me{
     /* Alignment */
     display: flex;
@@ -234,7 +278,7 @@ footer{
 
 .landing__h2{
     
-    font-size: 4.375rem;
+    font-size: 3.5rem;
     color: var(--cor-primaria);
 }
 
@@ -252,8 +296,8 @@ footer{
 .landing{
     /* Box */
     background: linear-gradient(100deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 20%, rgba(36,22,0,1) 30%, rgba(18,18,18,1) 40%, rgba(18,18,18,1) 100%);
-    height: 95vh;
     width: 100%;
+    height: 100%;
 }
 
 .landing__buttonArea{
@@ -364,98 +408,75 @@ footer{
     position: absolute;
     width: auto; /* you can use % */
     height: 95%;
-    
+        
     right: 0;
-    bottom: 7%;
-    z-index: 0;
+    bottom: 50;
+    z-index: -1;
 }
 /*#endregion LandingArea*/
 /*#region About*/
 .about{
     /* Alignment */
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;   
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 60% 40%;
     
     /* box */
     height: 95vh;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-right: 5%;
     padding-top: 2%;
 }
 
 .about__text{
     /* Alignment */
-    gap: 1.5rem;
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.about__abilityArea{
+    padding-left: 1rem;
+}
+
+.about__abilityArea > h2{
+    color: var(--cor-destaque);
+    font-size: 1.5rem;
+}
+
+.about__abilityArea > h3{
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.about__abilityList{
+    gap: 0 1rem;
 }
 /*#endregion*/
-
-@media (max-width: 1250px){
-    .leftSpace{
-        padding-left: 10%;
-    }
+/*#region PortfolioArticle*/
+.pArticleHeader{
+    display: grid;
+    grid-template-columns: 30% 70%;
     
-    .landing{
-        /* Alignment */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-    
-        /* Box */
-        background: linear-gradient(100deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 10%, rgba(36,22,0,1) 20%, rgba(18,18,18,1) 30%, rgba(18,18,18,1) 100%);
-        height: 95vh;
-        width: 100%;
-    }
-    
-    header{
-        width: 90%;
-    }
-
 }
 
-@media (max-width: 1100px){
-    .leftSpace{
-        padding-left: 5%;
-    }
-
-    header{
-        width: 95%;
-    }
-
-    .landing__photoArea__Photo{
-        /* Alignment */
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        flex-direction: column;
-        position: absolute;
-        width: auto; /* you can use % */
-        height: 75%;
-        
-        right: 0;
-        bottom: 7%;
-
-        background-image: url("Assets/FotoEduardoPoffo");
-    }
+.pArticleHeaderTexts{
+    margin-left: 2rem;
+    margin-right: 1rem;
+    text-align: justify;
 }
 
-/* Phone */
-@media (max-width: 950px){
-    .landing__photoArea__Photo{
-        /* Alignment */
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        flex-direction: column;
-        position: absolute;
-        width: auto; /* you can use % */
-        height: 0%;
-        
-        right: 0;
-        bottom: 7%;
-
-        background-image: url("Assets/FotoEduardoPoffo");
-    }
+.ArticleAreaBorder{
+    border: 2px solid var(--cor-fundo-botao-hover);
+    box-sizing: border-box;
+    padding: 5px;
 }
+
+.pArticleFotosArea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: left;
+    gap: 10px;
+}
+
+/*#endregion*/
