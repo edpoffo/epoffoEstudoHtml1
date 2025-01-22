@@ -10,7 +10,7 @@ console.log(projectDescriptionText);
 
 console.log(entry);
 
-if(entry == null) window.location.href = "index.html";
+//if(entry == null) window.location.href = "index.html";
 
 var found = false;
 for (let i = 0; i < data.entradas.length; i++) {
