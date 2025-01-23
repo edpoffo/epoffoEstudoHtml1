@@ -14,20 +14,16 @@ console.log(entry);
 
 //if(entry == null) window.location.href = "index.html";
 
-var found = false;
+var found = null;
 for (let i = 0; i < data.entradas.length; i++) {
     if(entry != data.entradas[i].Nome) continue;
-    found = true;
-
-    ProjectNameText.textContent = entry;
-    projectDescriptionText.textContent = data.entradas[i].Descricao;
-
-    /*var fs = require('fs');
-    var files = fs.readdirSync('../Portfolios/'+entry);
-
-    console.log(files.length);*/
-    
+    found = data.entradas[i];
+    break;    
 }
-
-if(!found) console.log("404");
+console.log(found);
+if(found == null) console.log("404");
 /*window.location.href = "index.html"; /* TODO: Redirect to 404*/
+
+
+////// Updating page
+/// Modifying page header
