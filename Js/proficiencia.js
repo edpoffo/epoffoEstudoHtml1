@@ -12,7 +12,7 @@ var curPerc = 0;
 
 var counterClockwise = false;
 var centerPos = Math.PI / 2;
-var totalAngle = 4 * Math.PI / 3;
+var totalAngle = 2 * Math.PI  * (220 / 360);
 var minPos = centerPos + (((2 * Math.PI) - totalAngle)/2);
 var maxPos = centerPos - (((2 * Math.PI) - totalAngle)/2);
 
@@ -35,7 +35,7 @@ function animate(current) {
             h = c.height;
             w = c.width;
 
-            context.lineWidth = h/12;
+            context.lineWidth = h/10;
             var radius = h/2 - context.lineWidth;
 
             var x = w / 2;

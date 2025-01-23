@@ -469,7 +469,7 @@ footer{
 }
 
 .about__abilityList{
-    gap: 0 1rem;
+    gap: 0.5rem;
 }
 /*#endregion*/
 /*#region PortfolioArticle*/
