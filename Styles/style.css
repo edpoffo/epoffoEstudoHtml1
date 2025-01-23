@@ -65,6 +65,7 @@ body{
     flex-direction: column;
     box-sizing: border-box;
     
+    
     /* box */
     background-color:var(--cor-fundo);
 
