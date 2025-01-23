@@ -2,13 +2,15 @@
     "entradas" : [
         {
             "Nome" : "Exemplo",
-            "NomeFotoCapa" : "",
-            "Descricao" : "Wow, you can really Dance"
+            "NomeFotoCapa" : "IMG3.jpeg",
+            "Descricao" : "Wow, you can really Dance",
+            "Fotos" : ["IMG1.jpeg", "IMG2.jpeg", "IMG3.jpeg"]
         },
         {
             "Nome" : "Exemplo2",
-            "NomeFotoCapa" : "",
-            "Descricao" : ""
+            "NomeFotoCapa" : "IMG1.jpeg",
+            "Descricao" : "AAAAAAAAAAAAAAAAAAAAAAAA",
+            "Fotos" : []
         }
     ]  
   }
